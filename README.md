@@ -19,4 +19,4 @@ Rank: 41/541
 * **Modeling** :
   1. ANN architecture : 4 hidden layers using the AdamW optimizer with 0.05 as a learning rate
   2. Ridge
-  3. Combined the two algorithms : $0.0905 y_{-}ann + 0.0975 y_{-}ridge
+  3. Combined the two algorithms : $0.0905 y_{-}ann + 0.0975 y_{-}ridge$
