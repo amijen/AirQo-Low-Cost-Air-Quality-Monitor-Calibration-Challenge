@@ -9,3 +9,14 @@ The challenge is part of the [Zindi competition](https://zindi.africa/competitio
 
 ## Rank on Leaderboard 
 Rank: 41/541 
+## Our Approach
+* **Data Preprocessing** :
+  1. Keep only the angles that presents the minimum percentage of missing values and filling with additionnal angles according to [ARKA 360](https://arka360.com/ros/solar-angles/).
+  2. Fill the missing values by month period.
+* **Feature Engineering** :
+  1. Regarding to the fact that the training dataset and testing dataset are coming from different distributions, we noticed that there are multiple sites that are close, so we decide to code the site latitude and site longtitude with geohash encoder.
+  2. Adding the variation of PM2.5 by month and by hour
+* **Modeling** :
+  1. ANN architecture : 4 hidden layers using the AdamW optimizer with 0.05 as a learning rate
+  2. Ridge
+  3. Combined the two algorithms : $0.0905 y_{-}ann + 0.0975 y_{-}ridge
